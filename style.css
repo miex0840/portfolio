@@ -58,16 +58,56 @@ a {
 
 /* BOX OVERLAY */
 
-.box1, .box2 {
-    /*float: left;*/
+.container {
     position: relative;
-    /*overflow: hidden;*/
+    width: 300px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000000;
+}
+
+.container:hover .overlay {
+    opacity: 0.8;
+}
+
+.text {
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+/*
+.box1, .box2 {
+    float: left;
+    position: relative;
+    overflow: hidden;
     width: 300px;
     height: 300px;
 }
 
 .overlay {
-    /*display: none;*/
+    display: none;
     z-index: 5;
     position: absolute;
     width: 100%;
@@ -76,7 +116,7 @@ a {
 }
 
 .content {
-    /*display: none;*/
+    display: none;
     position: absolute;
     top: 0;
     width: 100%;
@@ -87,3 +127,4 @@ a {
 .visible {
     z-index: 5;
 }
+*/
