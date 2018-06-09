@@ -106,6 +106,14 @@ header {
 
 #portfolio {
     height: 100vh;
+    padding: 4em;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2em;
 }
 
 /* BOX OVERLAY */
