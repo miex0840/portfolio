@@ -1,20 +1,20 @@
-//$(window).on("load", sidenVises);
-//
-//function sidenVises() {
-//    console.log("sidenVises");
-//    $(".box1").on("mouseover", overlayVises);
-//}
-//
-//function overlayVises() {
-//    console.log("overlayVises");
-//    $(".overlay").addClass("visible");
-//    $(".content").removeClass("visible");
-//    $(".box1").on("mouseout", overlaySkjules);
-//}
-//
-//function overlaySkjules() {
-//    console.log("overlaySkjules");
-//    $(".overlay").removeClass("visible");
-//    $(".content").addClass("visible");
-//
-//}
+$(window).on("load", sidenVises);
+
+function sidenVises() {
+    console.log("sidenVises");
+    $(".menubutton").on("click", åbenMenu);
+}
+
+function åbenMenu() {
+    console.log("åbenMenu");
+    $("nav").toggleClass("hidden");
+    $(".menubutton").toggleClass("kryds");
+    $("nav a").on("click", lukMenu)
+}
+
+function lukMenu() {
+    console.log("lukMenu");
+    $("nav").toggleClass("hidden");
+    $(".menubutton").toggleClass("kryds");
+    $("nav a").on("click", åbenMenu);
+}

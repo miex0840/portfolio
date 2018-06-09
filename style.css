@@ -15,9 +15,27 @@ h3 {
     font-weight: 400;
 }
 
-p,
-a {
+p {
     font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    text-align: center;
+    position: relative;
+    padding: 5em;
+
+    transition: transform .5s;
+    z-index: 5;
+}
+
+nav.hidden {
+    display: none;
+}
+
+nav a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    line-height: 2em;
 }
 
 .wrapper {
@@ -38,10 +56,43 @@ a {
     margin-bottom: auto;
 }
 
-#navigation {
-    background-color: rgba(255, 255, 255, 0.8);
-    position: fixed;
+.menubutton {
+    width: 2em;
+    height: 2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+    z-index: 10;
+}
+
+.bar {
+    width: 1.8em;
+    height: 0.2em;
+    background-color: black;
+    transition: transform .5s;
+}
+
+.kryds .bar1 {
+    transform: rotate(45deg) translate(8px, 7px);
+}
+
+.kryds .bar2 {
+    visibility: hidden;
+}
+
+.kryds .bar3 {
+    transform: rotate(-45deg) translate(8px, -7px);
+}
+
+header {
+    background-color: white;
+    position: sticky;
     top: 0;
+    z-index: 99;
 }
 
 #desktop {
@@ -49,6 +100,7 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: 0 1vh;
     height: 100vh;
 }
 
@@ -96,35 +148,3 @@ a {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
-
-/*
-.box1, .box2 {
-    float: left;
-    position: relative;
-    overflow: hidden;
-    width: 300px;
-    height: 300px;
-}
-
-.overlay {
-    display: none;
-    z-index: 5;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.content {
-    display: none;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #111;
-}
-
-.visible {
-    z-index: 5;
-}
-*/
