@@ -2,6 +2,7 @@ $(window).on("load", sidenVises);
 
 function sidenVises() {
     console.log("sidenVises");
+    //menu
     $(".menubutton").on("click", åbenMenu);
 }
 

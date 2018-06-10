@@ -11,8 +11,15 @@ h2,
 h3 {
     font-family: 'Allura', cursive;
     text-align: center;
-    font-size: 4em;
     font-weight: 400;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 3em;
 }
 
 p {
@@ -25,7 +32,8 @@ nav {
     height: 100vh;
     width: 100vw;
     padding: 5em 0 5em 0;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: white;
+    opacity: 0.9;
 
     transition: transform .5s;
     z-index: 5;
@@ -35,15 +43,17 @@ nav {
     animation-name: fade;
     animation-iteration-count: 1;
     animation-duration: 1s;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease;
+    align-items: center;
+
 }
 
 @keyframes fade {
     from {
-        background-color: rgba(255, 255, 255, 0);
+        opacity: 0;
     }
     to {
-        background-color: rgba(255, 255, 255, 0.8);
+        opacity: 0.9;
     }
 }
 
@@ -56,6 +66,10 @@ nav a {
     font-family: 'Montserrat', sans-serif;
     font-size: 2em;
     line-height: 2em;
+    color: black;
+}
+
+a {
     text-decoration: none;
     color: black;
 }
@@ -70,6 +84,30 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+#cv .wrapper {
+    flex-direction: row-reverse;
+}
+
+.cv {
+    flex-basis: 500px;
+    flex-grow: 3;
+    margin-top: 2em;
+}
+
+#cv {
+    padding: 2em;
+}
+
+#cv .line {
+    margin-bottom: 2em;
+}
+
+#skills {
+    flex: 350px;
+    flex-grow: 2;
+    margin-top: 2em;
 }
 
 .logo {
@@ -117,7 +155,7 @@ nav a:hover {
 }
 
 #topbar {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     position: sticky;
     top: 0;
     z-index: 99;
@@ -143,6 +181,55 @@ nav a:hover {
     justify-content: center;
     margin: auto;
     max-width: 1000px;
+    padding-top: 1em;
+}
+
+.kontakt {
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding: 1em;
+}
+
+.follow {
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding: 1em;
+}
+
+.content {
+    flex-basis: 75%;
+    padding: 1em;
+}
+
+.icon {
+    flex-basis: 5%;
+    padding: 1em;
+}
+
+.icon img {
+    width: 20px;
+}
+
+.line {
+    background-color: #4d6ba3;
+    width: 75%;
+    height: 3px;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    animation-name: line;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes line {
+    from {
+        width: 0;
+    }
+    to {
+        width: 75%;
+    }
 }
 
 /* BOX OVERLAY */
@@ -189,7 +276,7 @@ nav a:hover {
 @media screen and (max-width: 768px) {
     #desktop {
         background-size: contain;
-        height: 40vh;
+        height: 47vh;
     }
 
     .logo {
@@ -235,5 +322,118 @@ nav a:hover {
 
     .kryds .bar3 {
         transform: rotate(-45deg) translate(6px, -5px);
+    }
+}
+
+/* SKILLBAR */
+
+#skill1 {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 25px;
+    margin: auto;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+#skill1 p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 3px 5px;
+}
+
+#html {
+    background-color: #4d6ba3;
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-name: html;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+#skill2 {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 25px;
+    margin: auto;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+#skill2 p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 3px 5px;
+}
+
+#js {
+    background-color: #4d6ba3;
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-name: js;
+    animation-duration: 3.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes js {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+#skill3 {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 25px;
+    margin: auto;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+#skill3 p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 3px 5px;
+}
+
+#adobe {
+    background-color: #4d6ba3;
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-name: adobe;
+    animation-duration: 4.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes adobe {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
     }
 }
