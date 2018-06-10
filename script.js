@@ -9,6 +9,7 @@ function åbenMenu() {
     console.log("åbenMenu");
     $("nav").toggleClass("hidden");
     $(".menubutton").toggleClass("kryds");
+    $("nav").addClass("fade");
     $("nav a").on("click", lukMenu)
 }
 

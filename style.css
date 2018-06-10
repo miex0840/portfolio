@@ -9,7 +9,7 @@ img {
 h1,
 h2,
 h3 {
-    font-family: 'Dawning of a New Day', cursive;
+    font-family: 'Allura', cursive;
     text-align: center;
     font-size: 4em;
     font-weight: 400;
@@ -21,21 +21,49 @@ p {
 
 nav {
     text-align: center;
-    position: relative;
-    padding: 5em;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    padding: 5em 0 5em 0;
+    background-color: rgba(255, 255, 255, 0.8);
 
     transition: transform .5s;
     z-index: 5;
 }
 
-nav.hidden {
+.fade {
+    animation-name: fade;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fade {
+    from {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    to {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.hidden {
     display: none;
 }
 
 nav a {
+    display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-size: 2em;
     line-height: 2em;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 0;
 }
 
 .wrapper {
@@ -88,8 +116,8 @@ nav a {
     transform: rotate(-45deg) translate(8px, -7px);
 }
 
-header {
-    background-color: white;
+#topbar {
+    background-color: rgba(255, 255, 255, 0.8);
     position: sticky;
     top: 0;
     z-index: 99;
@@ -100,8 +128,8 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 0 1vh;
     height: 100vh;
+    margin-top: -70px;
 }
 
 #portfolio {
@@ -113,7 +141,8 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 2em;
+    margin: auto;
+    max-width: 1000px;
 }
 
 /* BOX OVERLAY */
@@ -155,4 +184,56 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 768px) {
+    #desktop {
+        background-size: contain;
+        height: 40vh;
+    }
+
+    .logo {
+        flex-basis: 125px;
+        padding: 0.3em;
+    }
+
+    .menu {
+        margin-top: auto;
+        margin-right: 0.3em;
+        padding: 0.5em;
+    }
+
+    .menubutton {
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    .kryds .bar1 {
+        transform: rotate(45deg) translate(6px, 5px);
+    }
+
+
+    .kryds .bar3 {
+        transform: rotate(-45deg) translate(6px, -5px);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #desktop {
+        background-size: contain;
+        height: 30vh;
+    }
+
+    #portfolio {
+        padding: 2em;
+    }
+
+    .kryds .bar1 {
+        transform: rotate(45deg) translate(6px, 5px);
+    }
+
+
+    .kryds .bar3 {
+        transform: rotate(-45deg) translate(6px, -5px);
+    }
 }
