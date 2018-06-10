@@ -104,6 +104,10 @@ nav a:hover {
     margin-bottom: 2em;
 }
 
+#kontakt {
+    margin: 1em;
+}
+
 #skills {
     flex: 350px;
     flex-grow: 2;
@@ -308,7 +312,7 @@ nav a:hover {
 @media screen and (max-width: 500px) {
     #desktop {
         background-size: contain;
-        height: 30vh;
+        height: 37vh;
     }
 
     #portfolio {
