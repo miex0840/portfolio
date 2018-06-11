@@ -105,7 +105,7 @@ nav a:hover {
 }
 
 #kontakt {
-    padding: 1em;
+    margin: 1em;
 }
 
 #skills {
@@ -306,6 +306,10 @@ nav a:hover {
 
     .kryds .bar3 {
         transform: rotate(-45deg) translate(6px, -5px);
+    }
+
+    #kontakt {
+        margin: 0;
     }
 }
 
